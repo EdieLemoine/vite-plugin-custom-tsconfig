@@ -28,6 +28,8 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn build
+
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
