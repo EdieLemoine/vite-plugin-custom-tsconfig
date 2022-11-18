@@ -29,7 +29,7 @@ function customTsConfigPlugin(options?: PluginOptions): Plugin {
     name: NAME,
 
     config() {
-      if (tsConfigExists() && tsConfigHasBanner()) {
+      if (tsConfigExists() && !tsConfigHasBanner()) {
         throw new Error(
           "tsconfig.json already exists. Please delete it or remove vite-plugin-custom-tsconfig from your Vite config"
         );
