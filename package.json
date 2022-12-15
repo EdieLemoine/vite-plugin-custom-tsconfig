@@ -5,18 +5,11 @@
   "license": "MIT",
   "author": "Edie Lemoine <edie.lemoine@gmail.com>",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "require": "./lib/index.cjs",
-      "import": "./lib/index.js"
-    }
-  },
-  "main": "lib/index.cjs",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "lib"
+    "./lib"
   ],
   "release": {
     "branches": [
