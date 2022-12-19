@@ -24,7 +24,7 @@
     ]
   },
   "scripts": {
-    "build": "tsup src/index.ts --dts --out-dir lib --format esm,cjs --target node14",
+    "build": "tsup src/index.ts --dts --out-dir lib --format esm,cjs --target node14 --minify",
     "prepare": "is-ci || husky install",
     "semantic-release": "semantic-release"
   },
