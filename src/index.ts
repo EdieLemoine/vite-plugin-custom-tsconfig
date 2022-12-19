@@ -19,7 +19,7 @@ const tsConfigHasBanner = () => {
   return tsconfigContent.startsWith(BANNER);
 };
 
-function customTsConfigPlugin(options?: PluginOptions): Plugin {
+export const customTsConfigPlugin = (options?: PluginOptions): Plugin => {
   const resolvedOptions: Required<PluginOptions> = {
     tsConfigPath: "tsconfig.build.json",
     ...options,
@@ -57,6 +57,6 @@ function customTsConfigPlugin(options?: PluginOptions): Plugin {
       fs.rmSync("tsconfig.json", { force: true });
     },
   };
-}
+};
 
 export default customTsConfigPlugin;
