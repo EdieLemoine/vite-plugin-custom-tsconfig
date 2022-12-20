@@ -5,12 +5,26 @@
   "license": "MIT",
   "author": "Edie Lemoine <edie.lemoine@gmail.com>",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "main": "./lib/index.cjs",
-  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
-    "./lib"
+    "lib"
   ],
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "prepare": "is-ci || husky install",
+    "semantic-release": "semantic-release"
+  },
+  "lint-staged": {
+    "*.ts": "prettier --write",
+    "package.json": "npx -q sort-package-json"
+  },
   "release": {
     "branches": [
       "main"
@@ -23,15 +37,6 @@
       "@semantic-release/git"
     ]
   },
-  "scripts": {
-    "build": "tsup src/index.ts --dts --out-dir lib --format esm,cjs --target node14 --minify",
-    "prepare": "is-ci || husky install",
-    "semantic-release": "semantic-release"
-  },
-  "lint-staged": {
-    "*.ts": "prettier --write",
-    "package.json": "npx -q sort-package-json"
-  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.11.9",
@@ -41,7 +46,7 @@
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.4",
     "vite": "^3.2.4"
   },
   "packageManager": "yarn@3.3.0",

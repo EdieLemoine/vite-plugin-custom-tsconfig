@@ -19,7 +19,7 @@ const tsConfigHasBanner = () => {
   return tsconfigContent.startsWith(BANNER);
 };
 
-export const customTsConfigPlugin = (options?: PluginOptions): Plugin => {
+const customTsConfigPlugin = (options?: PluginOptions): Plugin => {
   const resolvedOptions: Required<PluginOptions> = {
     tsConfigPath: "tsconfig.build.json",
     ...options,
