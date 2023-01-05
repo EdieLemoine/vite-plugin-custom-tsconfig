@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-custom-tsconfig",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "github:edielemoine/vite-plugin-custom-tsconfig",
   "license": "MIT",
   "author": "Edie Lemoine <edie.lemoine@gmail.com>",
