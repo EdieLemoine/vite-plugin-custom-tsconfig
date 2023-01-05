@@ -16,7 +16,7 @@ const tsConfigExists = () => {
 const tsConfigHasBanner = () => {
   const tsconfigContent = fs.readFileSync(TSCONFIG_PATH, "utf8");
 
-  return tsconfigContent.startsWith(BANNER);
+  return tsconfigContent.startsWith(BANNER.trim());
 };
 
 const customTsConfigPlugin = (options?: PluginOptions): Plugin => {
