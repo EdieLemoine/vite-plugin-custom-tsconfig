@@ -11,7 +11,7 @@ export default defineConfig({
     }
   },
   format: ["cjs", "esm"],
-  minify: true,
+  // minify: true,
   outDir: "lib",
   target: "node14",
 });
