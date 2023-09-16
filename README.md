@@ -35,7 +35,7 @@ export default defineConfig({
   plugins: [
     customTsConfig({
       // default: 'tsconfig.build.json'
-      filename: 'tsconfig.app.json',
+      tsConfigPath: 'tsconfig.app.json',
     }),
   ],
 });
